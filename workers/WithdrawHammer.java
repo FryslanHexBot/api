@@ -14,7 +14,7 @@ import org.hexbot.core.concurrent.script.Worker;
 public class WithdrawHammer extends Worker{
     @Override
     public boolean validate() {
-        return APITester.withdrawHammer == false;
+        return !APITester.withdrawHammer;
     }
 
     @Override

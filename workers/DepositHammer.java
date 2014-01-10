@@ -14,7 +14,7 @@ import org.hexbot.core.concurrent.script.Worker;
 public class DepositHammer extends Worker{
     @Override
     public boolean validate() {
-        return APITester.depositHammer == false;
+        return !APITester.depositHammer;
     }
 
     @Override

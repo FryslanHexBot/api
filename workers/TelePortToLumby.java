@@ -15,14 +15,14 @@ import org.hexbot.core.concurrent.script.Worker;
  * Date: 10-1-14
  * Time: 18:16
  */
-public class TelePortTomby extends Worker {
+public class TelePortToLumby extends Worker {
 
     Area LumbyArea = new Area(new Tile[] { new Tile(3197, 3238, 0), new Tile(3189, 3212, 0), new Tile(3212, 3200, 0),
             new Tile(3233, 3209, 0), new Tile(3232, 3224, 0), new Tile(3226, 3241, 0) });
 
     @Override
     public boolean validate() {
-        return APITester.teleportLumby == false;
+        return !APITester.teleportLumby;
     }
 
     @Override

@@ -13,7 +13,7 @@ import org.hexbot.core.concurrent.script.Worker;
 public class OpenBank extends Worker{
     @Override
     public boolean validate() {
-        return APITester.openBank == false;
+        return !APITester.openBank;
     }
 
     @Override

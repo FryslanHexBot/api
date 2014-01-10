@@ -18,7 +18,7 @@ import org.hexbot.core.concurrent.script.Worker;
 public class PickPocketMen extends Worker {
     @Override
     public boolean validate() {
-        return APITester.pickPocketMen == false;
+        return !APITester.pickPocketMen;
     }
 
     @Override

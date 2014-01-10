@@ -16,10 +16,12 @@ import org.hexbot.core.concurrent.script.Worker;
  * Date: 10-1-14
  * Time: 21:33
  */
-public class shopBuyHandeler extends Worker{
+public class ShopBuyHandeler extends Worker{
+   private final Tile SHOP_TILE = new Tile(3211,3246);
+
     @Override
     public boolean validate() {
-        return APITester.buyhammer == false;
+        return !APITester.buyhammer;
     }
 
     @Override
@@ -48,7 +50,7 @@ public class shopBuyHandeler extends Worker{
 
         }else{
             System.out.println("Walking to Shop using Tile");
-            Walking.walk(new Tile(3211,3246));
+            Walking.walk(SHOP_TILE);
         }
     }
 }

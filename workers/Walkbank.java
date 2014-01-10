@@ -14,6 +14,9 @@ import org.hexbot.core.concurrent.script.Worker;
  * Time: 22:07
  */
 public class Walkbank extends Worker {
+
+    private final Tile BANK_TILE = new Tile(3092,3245);
+
     @Override
     public boolean validate() {
         return APITester.walkBank == false;
@@ -24,12 +27,12 @@ public class Walkbank extends Worker {
         GameObject booth = GameObjects.getNearestByAction("Bank");
         if(booth != null){
             if(booth.getLocation().getDistance() > 5){
-                Walking.walk(new Tile(3092,3245));
+                Walking.walk(BANK_TILE);
             }else{
                 APITester.walkBank = true;
             }
         }else{
-            Walking.walk(new Tile(3092,3245));
+            Walking.walk(BANK_TILE);
         }
     }
 }

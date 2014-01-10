@@ -29,7 +29,16 @@ public class APITester extends TaskScript implements Paintable {
             closeBank = false;
 
     public APITester(){
-        submit(new TelePortTomby(),new PickPocketMen(), new shopBuyHandeler(),new shopSellHandeler(),new Walkbank(), new OpenBank(),new DepositHammer(),new WithdrawHammer(),new CloseBank());
+        submit(
+                new TelePortToLumby(),
+                new PickPocketMen(),
+                new ShopBuyHandeler(),
+                new ShopSellHandeler(),
+                new Walkbank(),
+                new OpenBank(),
+                new DepositHammer(),
+                new WithdrawHammer(),
+                new CloseBank());
     }
 
     @Override

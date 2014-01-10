@@ -14,7 +14,7 @@ import org.hexbot.core.concurrent.script.Worker;
 public class CloseBank extends Worker {
     @Override
     public boolean validate() {
-        return APITester.closeBank == false;
+        return !APITester.closeBank;
     }
 
     @Override
